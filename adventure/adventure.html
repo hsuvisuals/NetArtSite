@@ -8,39 +8,70 @@
     
     <title>Hsuvisuals</title>
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     
    <link href="https://fonts.googleapis.com/css?family=Lemonada|Nunito+Sans|Work+Sans" rel="stylesheet">
 
-    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="scroll-down.js"></script>
 </head>
 
 <body>
     
-    <div class="frontpage">    
+ <section class="intro">
+        <div class="inner">
+            <div class="content">
+                <h1>ADVENTURE</h1>
+                <a class="btn" href="../index.html">Home</a>
+                <a class="btn2" href="../nostalgia/nostalgia.html">Nostalgia</a>
+                <a class="btn3" href="../favorite/index.html">Favorite</a>
+                <a class="ct-btn-scroll ct-js-btn-scroll" href="#"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+            </div>
+        </div>
+</section>
+            
+                
+          
     
-        <header><a href="index.html">Hsuvisuals</a></header>
-    
-        <nav>
-            <a href="about/about.html">About</a>
-            <a href="work/work.html">Work</a>
-            <a href="Inspiration/inspiration.html">Inspiration</a>
-        </nav>
-        
-    </div>
-    
-    <div class="background-wrap">
-        <video autoplay muted loop id="myVideo">
-            <source src=img/HSU_5560.mp4 type="video/mp4">
-            video not supported
-        </video>
-    </div>
-    
-    <audio controls autoplay loop>
-        <source src="music/edit%20audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <section>
+        <div class="video">
+            <h1>Parks and Recs</h1>
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/BE4jLn5xy9k">
+                </iframe>
+            </div>
+        <div class="video">
+            <h1>Devil's Slide</h1>
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/lOqGs0dbUAI&t=93s">
+                </iframe>
+        </div>
+        <div class="video">
+            <h1>Purpose</h1>
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/KMpIXMDvN4Y">
+                </iframe>
+        </div>        
+            
+     </section>
 
+    
+    <script>
+        $(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+    </script>
+    
+    
 </body>
                    
 </html>
